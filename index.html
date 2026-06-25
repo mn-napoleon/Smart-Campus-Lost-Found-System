@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Campus Lost & Found</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+    <div>
+        <h3>SMART CAMPUS</h3>
+        <small>LOST & FOUND SYSTEM</small>
+    </div>
+</div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="report-lost.html">Report Lost</a></li>
+            <li><a href="report-found.html">Report Found</a></li>
+            <li><a href="search.html">Search Items</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <i class="fa-solid fa-moon" id="darkModeBtn"></i>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Lost something?<br>
+                We're here to help.
+            </h1>
+
+            <p>
+                Report, search and recover lost items on campus.
+            </p>
+
+            <div class="buttons">
+
+                <a href="report-lost.html" class="btn">
+                    Report Lost Item
+                </a>
+
+                <a href="report-found.html" class="btn-outline">
+                    Report Found Item
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="images/hero-image.jpg" alt="Lost and Found">
+        </div>
+
+    </section>
+    <section class="dashboard">
+
+    <div class="stat-card">
+        <h2 id="totalReports">0</h2>
+        <p>Total Reports</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="lostCount">0</h2>
+        <p>Lost Items</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="foundCount">0</h2>
+        <p>Found Items</p>
+    </div>
+
+</section>
+
+
+    <!-- How it Works -->
+
+    <section class="steps">
+
+        <h2>How It Works</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <i class="fa-regular fa-file-lines"></i>
+        <h3>1. Report</h3>
+        <p>Report your lost or found item.</p>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <h3>2. Search</h3>
+        <p>Search available items.</p>
+    </div>
+
+    <div class="card">
+        <i class="fa-regular fa-bell"></i>
+        <h3>3. Match</h3>
+        <p>Find matching items.</p>
+    </div>
+
+    <div class="card">
+        <i class="fa-regular fa-circle-check"></i>
+        <h3>4. Recover</h3>
+        <p>Get your item back.</p>
+    </div>
+
+</div>
+
+    </section>
+
+    <footer>
+        © 2025 Smart Campus Lost & Found System
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

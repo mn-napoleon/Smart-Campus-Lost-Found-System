@@ -1,0 +1,8 @@
+{
+  "name": "Smart Campus Lost & Found",
+  "short_name": "LostFound",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0c1f5c"
+}

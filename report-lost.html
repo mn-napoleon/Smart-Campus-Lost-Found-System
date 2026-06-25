@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Lost Item</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+        <div>
+            <h3>SMART CAMPUS</h3>
+            <small>LOST & FOUND SYSTEM</small>
+        </div>
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="report-lost.html">Report Lost</a></li>
+        <li><a href="report-found.html">Report Found</a></li>
+        <li><a href="search.html">Search Items</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+
+<section class="form-container">
+
+    <h1>Report Lost Item</h1>
+
+    <p>Fill in the details of your lost item.</p>
+
+    <form id="lostForm">
+
+        <div class="form-grid">
+
+            <div>
+                <label>Item Name *</label>
+                <input type="text" id="itemName" required>
+            </div>
+
+            <div>
+                <label>Location Lost *</label>
+                <input type="text" id="location" required>
+            </div>
+
+            <div>
+                <label>Category *</label>
+
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option>Wallet</option>
+                    <option>Phone</option>
+                    <option>Keys</option>
+                    <option>Student ID</option>
+                    <option>Bag</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Image</label>
+                <input
+                    type="file"
+                     id="image"
+                      accept="image/*">
+            </div>
+
+        </div>
+
+        <label>Description *</label>
+        <textarea id="description" required></textarea>
+
+        <label>Date Lost *</label>
+        <input type="date" id="dateLost" required>
+
+        <button type="submit" class="submit-btn">
+            Submit Report
+        </button>
+
+    </form>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
