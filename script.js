@@ -243,21 +243,18 @@ if(darkModeBtn){
 
 }
 
-    if ("serviceWorker" in navigator) {
-
+  if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
-
-        navigator.serviceWorker
-            .register("sw.js")
+        navigator.serviceWorker.register("sw.js")
             .then(() => {
-
                 console.log("Service Worker Registered");
-
+            })
+            .catch(error => {
+                console.log("Service Worker Error:", error);
             });
-
     });
-
 }
+
 const menuToggle = document.querySelector(".menu-toggle");
 
 const navLinks = document.querySelector(".nav-links");
