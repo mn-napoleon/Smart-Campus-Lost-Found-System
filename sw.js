@@ -1,25 +1,32 @@
-const CACHE_NAME = "lostfound-v1";
+const CACHE_NAME = "smart-campus-v1";
 
-const urlsToCache = [
-
-    "/",
-    "/index.html",
-    "/style.css",
-    "/script.js",
-    "/search.html",
-    "/report-lost.html",
-    "/report-found.html",
-    "/about.html"
-
+const FILES_TO_CACHE = [
+    "./",
+    "./index.html",
+    "./report-lost.html",
+    "./report-found.html",
+    "./search.html",
+    "./item-details.html",
+    "./about.html",
+    "./style.css",
+    "./script.js",
+    "./manifest.json",
+    "./images/logo.png",
+    "./images/hero-image.jpg",
+    "./images/icon-192.png",
+    "./images/apple-icon.png"
 ];
 
-self.addEventListener("install", event => {
-
+self.addEventListener("install", (event) => {
     event.waitUntil(
-
         caches.open(CACHE_NAME)
-        .then(cache => cache.addAll(urlsToCache))
-
+        .then(cache => cache.addAll(FILES_TO_CACHE))
     );
+});
 
+self.addEventListener("fetch", (event) => {
+    event.respondWith(
+        caches.match(event.request)
+        .then(response => response || fetch(event.request))
+    );
 });

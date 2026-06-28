@@ -243,15 +243,30 @@ if(darkModeBtn){
 
 }
 
-if("serviceWorker" in navigator){
+    if ("serviceWorker" in navigator) {
 
-    navigator.serviceWorker
-    .register("sw.js")
-    .then(() => {
+    window.addEventListener("load", () => {
 
-        console.log(
-            "Service Worker Registered"
-        );
+        navigator.serviceWorker
+            .register("sw.js")
+            .then(() => {
+
+                console.log("Service Worker Registered");
+
+            });
+
+    });
+
+}
+const menuToggle = document.querySelector(".menu-toggle");
+
+const navLinks = document.querySelector(".nav-links");
+
+if(menuToggle){
+
+    menuToggle.addEventListener("click", ()=>{
+
+        navLinks.classList.toggle("active");
 
     });
 

@@ -38,6 +38,18 @@ nav i{
     cursor:pointer;
 }
 
+ .menu-toggle{
+
+    display:none;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    color:white;
+
+}
+
 .logo{
     display:flex;
     align-items:center;
@@ -92,7 +104,9 @@ nav i{
 
 .buttons{
     margin-top:30px;
-}
+    display:flex;
+    gap:20px;
+       }
 
 .btn{
     background:#1d4ed8;
@@ -242,20 +256,22 @@ label{
 }
 
 .dashboard{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    padding:40px;
-    flex-wrap:wrap;
-}
 
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
 .stat-card{
-    background:white;
-    width:220px;
-    padding:25px;
-    text-align:center;
-    border-radius:12px;
-    box-shadow:0 2px 12px rgba(0,0,0,.1);
+
+    flex:1;
+
+    min-width:220px;
+
 }
 
 .stat-card h2{
@@ -278,4 +294,132 @@ label{
 .dark-mode .stat-card{
     background:#1f1f1f;
     color:white;
+}
+/* ==========================
+   Mobile Responsive Design
+========================== */
+
+@media screen and (max-width:768px){
+
+    nav{
+        flex-direction:column;
+        padding:15px;
+        text-align:center;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+    }
+
+    nav ul{
+        flex-direction:column;
+        margin-top:15px;
+        gap:12px;
+        padding:0;
+    }
+
+    nav li{
+        list-style:none;
+    }
+    
+    .buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+   }
+
+   .buttons a{
+    width:220px;
+    text-align:center;
+   }
+
+    .menu-toggle{
+        display:block;
+                }
+
+    .nav-links{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        text-align:center;
+        margin-top:15px;
+             }
+    .nav-links.active{
+                  display:flex;
+                    }
+
+    .nav-links li{
+
+        margin:10px 0;
+
+    }
+
+}
+@media screen and (max-width:768px){
+
+    .hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:30px;
+
+    }
+
+    .hero-text{
+
+        margin-bottom:30px;
+
+    }
+
+    .hero-text h1{
+
+        font-size:36px;
+
+    }
+
+    .hero-image img{
+
+        width:100%;
+
+        max-width:350px;
+
+    }
+
+}
+@media screen and (max-width:768px){
+
+    .form-container{
+
+        width:95%;
+
+        padding:20px;
+
+    }
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+#results{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+img{
+
+    max-width:100%;
+
+    height:auto;
+
 }
