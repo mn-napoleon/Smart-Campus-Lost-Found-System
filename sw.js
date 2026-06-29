@@ -1,4 +1,4 @@
-const CACHE_NAME = "smart-campus-v1";
+const CACHE_NAME = "smart-campus-v2";
 
 const FILES_TO_CACHE = [
     "./",
@@ -14,6 +14,7 @@ const FILES_TO_CACHE = [
     "./images/logo.png",
     "./images/hero-image.jpg",
     "./images/icon-192.png",
+    "./images/icon-512.png",
     "./images/apple-icon.png"
 ];
 
